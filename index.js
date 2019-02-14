@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const server = require("./server.js");
 
-const port = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4000;
 
 server.get("/", (req, res) => {
   res.status(200).send("Welcome to Node Blog API");
@@ -10,6 +10,6 @@ server.get("/", (req, res) => {
 
 // port
 
-server.listen(port, () => {
-  console.log(`\n\n*** Listening on port ${port} ***\n`);
+server.listen(PORT, () => {
+  console.log(`\n\n*** Listening on port ${PORT} ***\n`);
 });
