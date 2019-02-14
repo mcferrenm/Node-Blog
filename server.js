@@ -1,7 +1,6 @@
 const express = require("express");
 const helmet = require("helmet");
 const morgan = require("morgan");
-const cors = require("cors");
 
 const usersRouter = require("./users/users-router.js");
 const postsRouter = require("./posts/posts-router.js");
@@ -9,7 +8,6 @@ const postsRouter = require("./posts/posts-router.js");
 const server = express();
 
 // Global middleware
-server.use(cors());
 server.use(express.json());
 server.use(helmet());
 server.use(morgan("dev"));
